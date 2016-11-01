@@ -17,8 +17,6 @@ var listItemTemplate = {
 	'</li>'
 	);
 
-
-
 function addItem(state, item) {
 	state.items.push({
 		displayName: item,
@@ -49,3 +47,50 @@ function renderItem(item, itemId, itemTemplate, itemDataAttr) {
 	element.attr(itemDataAttr, itemId);
 	return element;
 }
+
+function renderList(state, listItem, itemDataAttr) {
+	var element = $(itemTemplate);
+	element.find('.js-shopping-item').text('item.displayName');
+	if (item.checkedOff) {
+		element.find('.js-shopping-item').addClass('shopping-item_checked');
+	}
+	element.find('.js-shopping-item-toggle')
+	element.attr(itemDataAttr, itemId);
+	return element;
+}
+
+function renderList(state, ListItem, itemDataAttr) {
+	var itemsHTML = state.items.map (
+		function(item, index) {
+			return renderItem(item, index, listItemTemplate, itemDataAttr);
+		});
+	listElement.html(itemsHTML);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
